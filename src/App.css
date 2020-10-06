@@ -17,6 +17,7 @@ body{
 .title{
     text-align: center;
     margin-top: 50px;
+    text-decoration: underline;
 }
 .container{
     width: 50%;
