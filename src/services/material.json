@@ -1,0 +1,126 @@
+[
+
+{
+    
+        "question": "Q1 => CPU stand for",
+        "answer": "Central Process Unit",
+        "options": [
+            "Central Program Unit",
+            "Central Process Unit",
+            "Central page Unit",
+            "None of these"
+        ]
+    
+},
+{
+   "question": "Q2 => Full form of OS is",
+   "answer": "Operating system",
+   "options":[
+    "Order of significance",
+    "Operating system",
+    "Open software",
+   "Optical Sensor"
+    
+   ]
+
+    
+
+},
+{
+    "question": "Q3 => The ribbon is used in",
+    "answer": "Dot Matrix printe",
+    "options":[
+     "Laser Printer",
+     "Plotter",
+     "Ink-jet printer",
+    "Dot Matrix printe"
+ 
+    ]
+
+},
+{
+    "question": "Q4 => Address book contains",
+    "answer": "All of the above",
+    "options":[
+     "Email address",
+     "Phone numbers",
+     "People Names",
+    "All of the above"
+ 
+    ]
+
+},
+{
+    "question": "Q5 => Joystick is used to",
+    "answer": "Both a and b",
+    "options":[
+     "Move cursor on the screen",
+     "Computer games",
+     "Both a and b",
+    "None of these"
+ 
+    ]
+
+},
+{
+    "question": "Q6=> What type of memory is volatile",
+    "answer": "RAM",
+    "options":[
+     "RAM",
+     "ROM",
+     "CASHE",
+    "None of these"
+ 
+    ]
+
+},
+{
+    "question": "Q7 => Main memory is also known as ",
+    "answer": "Primery memory",
+    "options":[
+     "Auxiliary memory",
+     "Primery memory",
+     "Secondry memory",
+    "None of these"
+ 
+    ]
+
+},
+{
+    "question": "Q8 => For reproducing sound the CD audio player uses a ",
+    "answer": "Laser Beam",
+    "options":[
+     "Quartz Cristal",
+     "Titanium Needle",
+     "Laser Beam",
+    "None of these"
+ 
+    ]
+
+},
+
+{
+    "question": "Q9 => Which of the following would indicate that the motherboard battery has failed  ",
+    "answer": "Hardware settings, including the current date and time reverts to default values",
+    "options":[
+     "Operating system passwords are lost",
+     "Files on the hard disk are lost and corrupted",
+     "Hardware settings, including virtual memory reverts to default values ",
+    "Hardware settings, including the current date and time reverts to default values"
+ 
+    ]
+
+},
+{
+    "question": "Q10 => What is MAC ",
+    "answer": "Media Access Control",
+    "options":[
+     "A computer made by Apple",
+     "Memory address corruption",
+     "Mediocre Apple Computer",
+    "Media Access Control"
+ 
+    ]
+
+}
+]

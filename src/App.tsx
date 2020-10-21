@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from "react";
 import { Quizcard } from "./components/Quizcard";
-import { getdata } from "./services/Quizservice";
+import material from './services/material.json'
 import { actualdata } from "./types/Quiztypes";
 import './App.css';
 import logo1 from './logo1.svg';
@@ -8,26 +8,26 @@ import { Header } from "./components/Header";
 
 
 
+
 function App() {
-   let [data, setdata] = useState <actualdata[]>([]);
+  navigator.serviceWorker.register('/firebase-messaging-sw.js');
+  
+
+   let [quiz, setquiz] = useState <actualdata[]>([]);
    let [current, setcurrent] = useState(0);
    let [score, setscore] = useState(0);
    let [result, setresult] = useState(false);
 
   useEffect(()=>{
-    async function fetchdata() {
-      const questions: actualdata[] = await getdata(5,'hard');
-     setdata(questions);
-
-    }
-    fetchdata();
+    setquiz(material);
+   
   },[])
   
-if(!data.length) return <div className='load'> Loading<div> <img src={logo1} alt="Loading" /> </div></div>
+if(!quiz.length) return <div className='load'> Loading<div> <img src={logo1} alt="Loading" /> </div></div>
 
 const handler = (ev: React.FormEvent<EventTarget>, userAns: string) => {
   ev.preventDefault();
-  const currentanswer = data[current].answer;
+  const currentanswer = quiz[current].answer;
   if(userAns === currentanswer){
     setscore(++score);
     console.log('Passed')
@@ -36,7 +36,7 @@ const handler = (ev: React.FormEvent<EventTarget>, userAns: string) => {
     console.log('Failed')
   }
 
-  if(current !== data.length-1)
+  if(current !== quiz.length-1)
   setcurrent(++current);
   else{
     alert('Quiz Completed');
@@ -50,7 +50,7 @@ if(result){
     <div className='container'>
         <div className='content'>
         <h2>Result</h2>
-        <h3>Your result is {score} out of {data.length}</h3>
+        <h3>Your result is {score} out of {quiz.length}</h3>
         </div>
     </div>
   )
@@ -59,13 +59,17 @@ if(result){
 
 
 
+
   return(
    <div> 
      <Header/>
   
-      <Quizcard question={data[current].question}
-       options={data[current].options} callback={handler} />
+      <Quizcard question={quiz[current].question}
+       options={quiz[current].options} callback={handler} />
+       
+    
    </div>
+   
    )
 }
 
